@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Odibee Sans", cursive;
+  background: linear-gradient(to right, #00f260, #0575e6);
+  color: #eee;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: lighter;
+}
+
+main {
+  display: flex;
+}
+
+p {
+  font-size: 3rem;
+}
+
+.btn {
+  font-size: 2rem;
+  margin: 2em auto;
+  border: none;
+  border-radius: 3%;
+}
+
+.ready {
+  width: 6em;
+  height: 2em;
+  font-family: inherit;
+  background-color: #fefefe;
+  color: #222;
+  cursor: pointer;
+}
+.ready:hover {
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* Modal section */
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  min-height: 50%;
+  padding: 5em;
+  background-color: #222;
+  transform: translate(-50%, -50%);
+  z-index: 17;
+}
+
+/* Guessing Game */
+
+.game {
+  box-shadow: 0 4rem 5rem rgba(0, 0, 0, 0.5);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  margin: 5em auto;
+  padding: 1em;
+}
+
+.right {
+  margin: 5em auto;
+}
+
+.guess-box {
+  font-family: inherit;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 5rem;
+  width: 3em;
+}
+
+.guess {
+  background-color: #eaeaea;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  font-family: inherit;
+  margin: 1em auto;
+  cursor: pointer;
+}
+.guess:hover {
+  background-color: #d6d6d6;
+  transition: 0.1s;
+}
+
+.reset {
+  background-color: #eaeaea;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  font-family: inherit;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.reset:hover {
+  background-color: #d6d6d6;
+  transition: 0.1s;
+}
+
+.number {
+  font-size: 7rem;
+  margin: 0.4em;
+}
+
+.message {
+  padding-top: 1em;
+  margin: 1.5em auto;
+  font-size: 3rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1000px) {
+  main {
+    flex-direction: column;
+  }
+  .modal {
+    min-height: 40%;
+    min-width: 80%;
+    margin: 0;
+  }
+  .left {
+    margin: 0;
+  }
+  .right {
+    margin: 0;
+  }
+  .guess-box {
+    font-size: 3rem;
+  }
+  .guess {
+    font-size: 2rem;
+  }
+  .guess:hover {
+    background-color: #fcfcfc;
+    transition: none;
+  }
+  .reset {
+    font-size: 2rem;
+  }
+  .reset:hover {
+    background-color: #fcfcfc;
+    transition: none;
+  }
+  .number {
+    font-size: 4rem;
+  }
+  .range {
+    margin-top: 10px;
+  }
+  .counter {
+    font-size: 2rem;
+  }
+  .message {
+    font-size: 2rem;
+  }
+}
