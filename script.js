@@ -38,6 +38,8 @@ btnGuess.addEventListener("click", () => {
       attemptsCounter.textContent = attempts;
     }
   } else if (guessBox === hiddenNumber) {
+    attempts++;
+    attemptsCounter.textContent = attempts;
     winningNumber.textContent = hiddenNumber;
     btnGuess.disabled = "disabled";
     displayMessage("Correct Number!");
@@ -46,6 +48,7 @@ btnGuess.addEventListener("click", () => {
 });
 
 btnReset.addEventListener("click", () => {
+  btnGuess.disabled = false;
   hiddenNumber = Math.trunc(Math.random() * 20) + 1;
   attempts = 0;
   attemptsCounter.textContent = attempts;
